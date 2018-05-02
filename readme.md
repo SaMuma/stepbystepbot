@@ -8,7 +8,7 @@ build.cmd
 ```
 
 ## Use Visual Studio 
-
+![alt-text](stepbystepbot/images/1.PNG)
 ### Build and debug
 1. download source code zip and extract source in local folder
 2. open {PROJ_NAME}.sln in Visual Studio

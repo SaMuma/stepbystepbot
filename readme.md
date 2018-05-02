@@ -68,32 +68,32 @@ Now that we have the capability to push our local project to the cloud, we can s
 In this section, we will create a VSTS project using Git as our source code version control and configure continuous integration and deployment.  
 1. Create a VSTS project at https://app.vsaex.visualstudio.com/, and make note of the project link ie https://<your-vsts-name>.visualstudio.com/_git/<your-project-name>
 2. From the command line, initialize git like so:
-		a. Navigate to your project folder 
-    ```
-		cd C:\<your-project-path>
+	a. Navigate to your project folder 
 	```
-		b. Create a git repo
-  ```
-		Git init .
+	cd C:\<your-project-path>
 	```
-		c. Commit code to local git repo
+	b. Create a git repo
 	```
-    Git add --all
-		Git commit -m "initial commit"
+	Git init .
 	```
-		d. Add the remote VSTS repo
+	c. Commit code to local git repo
 	```
-    Git remote add origin https://<your-vsts-name>.visualstudio.com/_git/<your-project-name>
+	Git add --all
+	Git commit -m "initial commit"
 	```
-		e. Create a master branch and push code to the remote repo
+	d. Add the remote VSTS repo
 	```
-    Git push origin master
-  ```
+	Git remote add origin https://<your-vsts-name>.visualstudio.com/_git/<your-project-name>
+	```
+	e. Create a master branch and push code to the remote repo
+	```
+	Git push origin master
+	```
 6. Set up continuous deployment (Web app bot > Build) 
-		a. Setup
-		b. Select VSTS as deployment option (this will spark an "initial commit" in the deployment section)
+	a. Setup
+	b. Select VSTS as deployment option (this will spark an "initial commit" in the deployment section)
 7. On VSTS set up CI by clicking build and release > Builds> mine, new definition
 8. On VSTS set up CD by clicking build and release > Reseases> new definition
-		a. Choose Azure Web App type
-		b. Name your environment & select owner
-    c. Connect to your azure subscription and select the app to deploy to
+	a. Choose Azure Web App type
+	b. Name your environment & select owner
+	c. Connect to your azure subscription and select the app to deploy to

@@ -31,18 +31,21 @@ a step by step guide to building a bot starting from Bot Service in Azure, runni
 1. On the Azure portal, go to the app settings tab of your bot application, and take note of the AzureWebJobsStorage key value.
 <img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/8.5.PNG" height=70% width=70%/>
 2. In Visual Studio, open the solution explorer to see your files. Navigate to the web.config file, and in the appsettings, add the following line of code: 
+
 ```
 <add key="AzureWebJobsStorage" value="" />
 ```
-<img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/6.5.PNG">
+
 <img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/9.PNG">
 Fill in the value with the one you just noted from your Azure portal. 
 
 ##### Test Locally using Bot Emulator
-- Run the Project using IIS Express. Take note of the IP Address that appears in the webpage that you are automatically directed to. 
-- Open BotFrameworkEmulator (you can download it here:https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator ) 
-- Enter the address from the webpage and append "/api/messages" to the end
-Click connect and test out the chat 
+1. Run the Project using IIS Express. Take note of the IP Address that appears in the webpage that you are automatically directed to. 
+2. Open BotFrameworkEmulator (you can download it here:https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator ) 
+3. Enter the address from the webpage and append "/api/messages" to the end
+Click connect and test out the chat
+
+<img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/10.PNG" height=70% width=70%/>
 
 At this point, here's what's going on. You have your bot app running in the cloud, and now you've downloaded a local copy which you are testing locally. Right now, these two apps are independent of one another.
 So the next step is to create a publish process from your local Visual Studio project to your app service online. 
@@ -50,9 +53,11 @@ So the next step is to create a publish process from your local Visual Studio pr
 ### Create a publish profile to push changes to the App Service in Azure
 Create a new Publish Profile
 Note that this is only done the first time. After this, all collaborators on an app will be able to see the publish profile already created in their Visual Studio tool and can just use that. 
-- Right click on your solution and select publish…
-- Create a publish profile by navigating to the proper resource group and app service. 
-- Click publish and note that the site you are directed to is azure hosted, as opposed to the local IP address it directed to when you ran it locally. Your local bot has been published to azure! 
+1. Right click on your solution and select publish…
+2. Create a publish profile by navigating to the proper resource group and app service. 
+3. Click publish and note that the site you are directed to is azure hosted, as opposed to the local IP address it directed to when you ran it locally. Your local bot has been published to azure!
+<img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/11.PNG" height=70% width=70%/>
+<img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/13.PNG" height=70% width=70%/>
 
 Now that we have the capability to push our local project to the cloud, we can set up a continuous integration/ delivery pipeline using VSTS. 
 

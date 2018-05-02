@@ -9,8 +9,7 @@ a step by step guide to building a bot starting from Bot Service in Azure, runni
 - Search for "Web App Bot" and click create
 - Fill in the required fields and click create (note the location)
 - Select "pin to dashboard" for easy access to this resource
-![alt text](https://raw.githubusercontent.com/samuma/stepbystepbot/master/images/1.png)
-![alt text](https://raw.githubusercontent.com/samuma/stepbystepbot/master/images/2.png)
+![alt text](https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/1.png)
 
 ### Download bot source code and run locally in Visual Studio 
 ##### Download the application code 

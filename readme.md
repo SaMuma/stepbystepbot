@@ -5,6 +5,8 @@ a step by step guide to building a bot starting from Bot Service in Azure, runni
 - Create a publish profile to push changes to the App Service in Azure 
 - Set up a CI/CD Pipeline using Visual Studio Team Services
 
+
+
 ### Create a Bot in the Azure Portal 
 1. Search for "Web App Bot" and click create
 2. Fill in the required fields and click create. Ensure you are using the proper location and App Service Plan. 

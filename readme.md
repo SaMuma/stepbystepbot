@@ -1,3 +1,4 @@
+
 # Azure Bot Service Bot: Step by Step
 a step by step guide to building a bot starting from Bot Service in Azure, running and testing locally, and pushing changes to Azure. We will walk through the following Steps: 
 - Create a bot in the Azure portal using Bot Service 
@@ -64,3 +65,35 @@ Note that this is only done the first time. After this, all collaborators on an 
 Now that we have the capability to push our local project to the cloud, we can set up a continuous integration/ delivery pipeline using VSTS. 
 
 ### Set up a CI/CD Pipeline using Visual Studio Team Services
+In this section, we will create a VSTS project using Git as our source code version control and configure continuous integration and deployment.  
+1. Create a VSTS project at https://app.vsaex.visualstudio.com/, and make note of the project link ie https://<your-vsts-name>.visualstudio.com/_git/<your-project-name>
+2. From the command line, initialize git like so:
+		a. Navigate to your project folder 
+    ```
+		cd C:\<your-project-path>
+	```
+		b. Create a git repo
+  ```
+		Git init .
+	```
+		c. Commit code to local git repo
+	```
+    Git add --all
+		Git commit -m "initial commit"
+	```
+		d. Add the remote VSTS repo
+	```
+    Git remote add origin https://<your-vsts-name>.visualstudio.com/_git/<your-project-name>
+	```
+		e. Create a master branch and push code to the remote repo
+	```
+    Git push origin master
+  ```
+6. Set up continuous deployment (Web app bot > Build) 
+		a. Setup
+		b. Select VSTS as deployment option (this will spark an "initial commit" in the deployment section)
+7. On VSTS set up CI by clicking build and release > Builds> mine, new definition
+8. On VSTS set up CD by clicking build and release > Reseases> new definition
+		a. Choose Azure Web App type
+		b. Name your environment & select owner
+    c. Connect to your azure subscription and select the app to deploy to

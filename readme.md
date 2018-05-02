@@ -57,7 +57,7 @@ Note that this is only done the first time. After this, all collaborators on an 
 2. Create a publish profile by navigating to the proper resource group and app service. 
 3. Click publish and note that the site you are directed to is azure hosted, as opposed to the local IP address it directed to when you ran it locally. Your local bot has been published to azure!
 
-<img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/11.PNG" height=30% width=30% /> <img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/13.PNG" height=60% width=60%/>
+<img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/11.PNG" height=30% width=30% /> <img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/13.PNG" height=70% width=70%/>
 
 Now that we have the capability to push our local project to the cloud, we can set up a continuous integration/ delivery pipeline using VSTS. 
 

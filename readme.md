@@ -14,20 +14,20 @@ a step by step guide to building a bot starting from Bot Service in Azure, runni
 <img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/2.PNG" height=30% width=30%/>
 
 ### Download bot source code and run locally in Visual Studio 
-##### Download the application code 
+#### Download the application code 
 1. Navigate to your newly created Web App Bot 
 2. Click on the build tab, and then select download zip file. (this step takes a minute) 
 3. Extract the files to your desired location on your computer
 
 <img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/5.PNG" height=70% width=70%/>
 
-##### Open the project in Visual Studio 
+#### Open the project in Visual Studio 
 1. Navigate to your project files and open the .sln file in visual studio
 2. Ensure that Visual Studio is up to date by clicking the flag icon. Update if necessary.
 <img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/6.5.PNG">
 3. Ensure that all your NuGet packages are up to date (Project>PackageManager>Updates>Update all) 
 
-##### Add Storage Settings
+#### Add Storage Settings
 1. On the Azure portal, go to the app settings tab of your bot application, and take note of the AzureWebJobsStorage key value.
 <img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/8.5.PNG" height=70% width=70%/>
 2. In Visual Studio, open the solution explorer to see your files. Navigate to the web.config file, and in the appsettings, add the following line of code: 
@@ -39,7 +39,7 @@ a step by step guide to building a bot starting from Bot Service in Azure, runni
 <img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/9.PNG">
 Fill in the value with the one you just noted from your Azure portal. 
 
-##### Test Locally using Bot Emulator
+#### Test Locally using Bot Emulator
 1. Run the Project using IIS Express. Take note of the IP Address that appears in the webpage that you are automatically directed to. 
 2. Open BotFrameworkEmulator (you can download it here:https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator ) 
 3. Enter the address from the webpage and append "/api/messages" to the end

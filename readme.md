@@ -6,29 +6,38 @@ a step by step guide to building a bot starting from Bot Service in Azure, runni
 - Set up a CI/CD Pipeline using Visual Studio Team Services
 
 ### Create a Bot in the Azure Portal 
-- Search for "Web App Bot" and click create
-- Fill in the required fields and click create (note the location)
-- Select "pin to dashboard" for easy access to this resource
+1. Search for "Web App Bot" and click create
+2. Fill in the required fields and click create. Ensure you are using the proper location and App Service Plan. 
+3. Select "pin to dashboard" for easy access to this resource
 
 <img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/1.PNG" height=70% width=70%/>
 <img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/2.PNG" height=30% width=30%/>
 
 ### Download bot source code and run locally in Visual Studio 
 ##### Download the application code 
-- Navigate to your newly created Web App Bot 
-- Click on the build tab, and then select download zip file. (this step takes a minute) 
-- Extract the files to your desired location on your computer
+1. Navigate to your newly created Web App Bot 
+2. Click on the build tab, and then select download zip file. (this step takes a minute) 
+3. Extract the files to your desired location on your computer
+
+<img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/5.PNG" height=70% width=70%/>
+
 ##### Open the project in Visual Studio 
-- Navigate to your project files and open the .sln file in visual studio
-- Ensure that Visual Studio is up to date by clicking the flag icon. Update if necessary. 
-- Ensure that all your NuGet packages are up to date (Project>PackageManager>Updates>Update all) 
+1. Navigate to your project files and open the .sln file in visual studio
+2. Ensure that Visual Studio is up to date by clicking the flag icon. Update if necessary.
+<img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/6.5.PNG">
+3. Ensure that all your NuGet packages are up to date (Project>PackageManager>Updates>Update all) 
+
 ##### Add Storage Settings
-- On the Azure portal, go to the app settings tab of your bot application, and take note of the AzureWebJobsStorage key value. 
-- In Visual Studio, open the solution explorer to see your files. Navigate to the web.config file, and in the appsettings, add the following line of code: 
+1. On the Azure portal, go to the app settings tab of your bot application, and take note of the AzureWebJobsStorage key value.
+<img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/8.5.PNG" height=70% width=70%/>
+2. In Visual Studio, open the solution explorer to see your files. Navigate to the web.config file, and in the appsettings, add the following line of code: 
 ```
 <add key="AzureWebJobsStorage" value="" />
 ```
+<img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/6.5.PNG">
+<img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/9.PNG">
 Fill in the value with the one you just noted from your Azure portal. 
+
 ##### Test Locally using Bot Emulator
 - Run the Project using IIS Express. Take note of the IP Address that appears in the webpage that you are automatically directed to. 
 - Open BotFrameworkEmulator (you can download it here:https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator ) 

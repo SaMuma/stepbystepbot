@@ -47,7 +47,6 @@ Fill in the value with the one you just noted from your Azure portal.
 2. Open BotFrameworkEmulator (you can download it here:https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator ) 
 3. Enter the address from the webpage and append "/api/messages" to the end
 Click connect and test out the chat
-
 <img src="https://raw.githubusercontent.com/SaMuma/stepbystepbot/master/images/10.PNG" height=70% width=70%/>
 
 At this point, here's what's going on. You have your bot app running in the cloud, and now you've downloaded a local copy which you are testing locally. Right now, these two apps are independent of one another.
@@ -90,10 +89,10 @@ In this section, we will create a VSTS project using Git as our source code vers
 	Git push origin master
 	```
 6. Set up continuous deployment (Web app bot > Build) 
-	a. Setup
-	b. Select VSTS as deployment option (this will spark an "initial commit" in the deployment section)
+   - Setup
+   - Select VSTS as deployment option (this will spark an "initial commit" in the deployment section)
 7. On VSTS set up CI by clicking build and release > Builds> mine, new definition
 8. On VSTS set up CD by clicking build and release > Reseases> new definition
-	a. Choose Azure Web App type
-	b. Name your environment & select owner
-	c. Connect to your azure subscription and select the app to deploy to
+   - Choose Azure Web App type
+   - Name your environment & select owner
+   - Connect to your azure subscription and select the app to deploy to
